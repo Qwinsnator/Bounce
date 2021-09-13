@@ -1,7 +1,5 @@
-var x = 50;
-var y = 50;
-var speedX = 2;
-var speedY = 5;
+// globale variabelen
+var ballen = [];
 
 /**
  * setup
@@ -11,6 +9,18 @@ var speedY = 5;
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
+
+  for (var i = 0; i < 25; i++) {
+    var randomx = random(50, 1230);
+    var randomy = random(50, 670);
+    var randomSpeedX = random (-5, 5);
+    var randomSpeedY = random (-5, 5);
+
+    var bal = new Bal(randomx, randomy, randomSpeedX, randomSpeedY);
+
+    ballen.push(bal);
+  }
+
 
 }
 
@@ -24,18 +34,8 @@ function draw() {
   // Kleur de achtergrond blauw, zodat je het kunt zien
   background('blue');
 
-  // stel vulkleur in
-  fill(255, 255, 255);
-
-  // teken een cirkel
-  ellipse(x, y, 80, 80);
-
-  //positie updaten
-  x = x + speedX;
-  y = y + speedY;
-
-  // laat stuiteren tegen de onderkant
-  if (y === 720) {
-    speedY = speedY * -1;
+  for(var i = 0; i < ballen.length; i++) {
+    ballen[i].show();
+    ballen[i].update();
   }
 }
