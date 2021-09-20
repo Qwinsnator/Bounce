@@ -24,7 +24,8 @@ function setup() {
   var superbal = new Superbal(400, 300, 10, 10);
   ballen.push(superbal); 
 
-
+  var nummmerbal = new nummer(100, 100, 8, 8);
+  ballen.push(nummerbal); 
 }
 
 

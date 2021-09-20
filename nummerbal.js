@@ -1,10 +1,10 @@
   class nummer extends Bal {
   nummer;
 
-  constructor(newX, newY, _speedX, _speedY, _nummer) {
-    super(_x, _y, _speedX, _speedY)
-    this.nummer = _nummer;
-  }
+  //constructor(_newX, _newY, _speedX, _speedY, _nummer) {
+    //super(_x, _y, _speedX, _speedY);
+    //this.nummer = _nummer;
+  //}
 
   // toont de bal
   show() {
